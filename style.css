@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Pacifico&display=swap');
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  background: linear-gradient(135deg, #4f4f85, #6a6ab8);
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.container {
+  text-align: center;
+}
+
+.animated-name {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-family: 'Pacifico', cursive;
+  font-size: 80px;
+  color: #f48fb1;
+  text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
+  margin-bottom: 20px;
+  animation: fade-in 2s ease-in-out;
+}
+
+.animated-name span {
+  opacity: 0;
+  animation: bounce 1s ease-in-out infinite;
+}
+
+.animated-name span:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.animated-name span:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.animated-name span:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.animated-name span:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+.animated-name span:nth-child(5) {
+  animation-delay: 1s;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-20px);
+    opacity: 0.8;
+  }
+}
+
+.container p {
+  font-size: 20px;
+  margin: 20px 0;
+  line-height: 1.5;
+}
+
+.container .btn {
+  display: inline-block;
+  background-color: #f48fb1;
+  color: white;
+  padding: 15px 30px;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 30px;
+  margin-top: 20px;
+  transition: 0.3s ease;
+}
+
+.container .btn:hover {
+  background-color: #e1a7c9;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
